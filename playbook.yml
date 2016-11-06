@@ -1,0 +1,11 @@
+- hosts: all
+  sudo: yes
+
+  tasks:
+  - name: install postgresql
+    yum: name={{ item }} state=latest
+    with_items:
+      - postgresql-server
+      - postgresql-devel
+      - postgresql-contrib
+      - python-psycopg2

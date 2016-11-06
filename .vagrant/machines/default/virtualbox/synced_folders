@@ -1,0 +1,1 @@
+{"virtualbox":{"/var/www":{"mount_options":["dmode=777","fmode=777"],"guestpath":"/var/www","hostpath":"/Users/endo/Desktop/vagrant/www","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/endo/Desktop/vagrant","disabled":false,"__vagrantfile":true}}}
