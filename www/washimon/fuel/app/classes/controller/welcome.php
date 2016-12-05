@@ -29,7 +29,14 @@ class Controller_Welcome extends Controller
 	 */
 	public function action_index()
 	{
+
+
 		return Response::forge(View::forge('welcome/index'));
+	}
+
+	public function action_YesNo()
+	{
+		return Response::forge(View::forge('welcome/Yes-No'));
 	}
 
 	/**
@@ -39,10 +46,31 @@ class Controller_Welcome extends Controller
 	 * @access  public
 	 * @return  Response
 	 */
-	public function action_hello()
+	public function action_mail()
 	{
-		return Response::forge(Presenter::forge('welcome/hello'));
-	}
+		$validation = Validation::forge();
+		$validation->add_field('username', 'ユーザー名', 'required|max_length[100]|valid_string[alpha,numeric,punctuation,dashes]' );
+		$validation->add_field('password', 'パスワード', 'required|min_length[8]|max_length[100]|valid_string[alpha,numeric,punctuation,dashes]' );
+
+		$data = $error = array();
+
+		$validateRes = $validation->run(Input::post());
+		$input = $validation->validated();
+		$data['input'] = $input;
+
+		// バリデーションエラー取得
+		if( !empty($validation->error()) ) {
+			foreach ($validation->error() as $field => $errorObj) {
+				$error[$field] = $errorObj->get_message();
+			}
+		}
+
+  	Debug::dump($input);
+					// ログイン成功
+					Response::redirect('welcome/index');
+
+
+		}
 
 	/**
 	 * The 404 action for the application.

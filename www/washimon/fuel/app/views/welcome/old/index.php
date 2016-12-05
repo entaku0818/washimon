@@ -2,7 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title><?php echo $title; ?></title>
+	<title>FuelPHP Framework</title>
+	/*<?php echo Asset::css('bootstrap.css'); ?>*
 	<style>
 		#logo{
 			display: block;
@@ -24,7 +25,7 @@
 		a:hover{
 			color: #af4cf0;
 		}
-		.btn.primary{color:#ffffff!important;background-color:#883ced;background-repeat:repeat-x;background-image:-khtml-gradient(linear, left top, left bottom, from(#fd6ef7), to(#883ced));background-image:-moz-linear-gradient(top, #fd6ef7, #883ced);background-image:-ms-linear-gradient(top, #fd6ef7, #883ced);background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #fd6ef7), color-stop(100%, #883ced));background-image:-webkit-linear-gradient(top, #fd6ef7, #883ced);background-image:-o-linear-gradient(top, #fd6ef7, #883ced);background-image:linear-gradient(top, #fd6ef7, #883ced);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fd6ef7', endColorstr='#883ced', GradientType=0);text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);border-color:#883ced #883ced #003f81;border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);}
+		.btn.btn-primary{color:#ffffff!important;background-color:#883ced;background-repeat:repeat-x;background-image:-khtml-gradient(linear, left top, left bottom, from(#fd6ef7), to(#883ced));background-image:-moz-linear-gradient(top, #fd6ef7, #883ced);background-image:-ms-linear-gradient(top, #fd6ef7, #883ced);background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #fd6ef7), color-stop(100%, #883ced));background-image:-webkit-linear-gradient(top, #fd6ef7, #883ced);background-image:-o-linear-gradient(top, #fd6ef7, #883ced);background-image:linear-gradient(top, #fd6ef7, #883ced);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fd6ef7', endColorstr='#883ced', GradientType=0);text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);border-color:#883ced #883ced #003f81;border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);}
 		body { margin: 0px 0px 40px 0px; }
 	</style>
 </head>
@@ -35,14 +36,34 @@
 		</div>
 	</header>
 	<div class="container">
+		<div class="jumbotron">
+			<h1>Welcome!</h1>
+			<p>You have successfully installed the FuelPHP Framework.</p>
+			<p><a class="btn btn-primary btn-lg" href="http://docs.fuelphp.com">Read the Docs</a></p>
+		</div>
 		<div class="row">
-			<div class="col-md-12">
-				<h1><?php echo $title; ?> <small>We can't find that!</small></h1>
-				<hr>
+			<div class="col-md-4">
+				<h2>Get Started</h2>
 				<p>The controller generating this page is found at <code>APPPATH/classes/controller/welcome.php</code>.</p>
-				<p>This view is located at <code>APPPATH/views/welcome/404.php</code>.</p>
+				<p>This view can be found at <code>APPPATH/views/welcome/index.php</code>.</p>
+				<p>You can modify these files to get your application started quickly.</p>
+			</div>
+			<div class="col-md-4">
+				<h2>Learn</h2>
+				<p>The best way to learn FuelPHP is reading through the <a href="http://docs.fuelphp.com">Documentation</a>.</p>
+				<p>Another good resource is the <a href="http://fuelphp.com/forums">Forums</a>.  They are fairly active, and you can usually get a response quickly.</p>
+			</div>
+			<div class="col-md-4">
+				<h2>Contribute</h2>
+				<p>FuelPHP wouldn't exist without awesome contributions from the community.  Use the links below to get contributing.</p>
+				<ul>
+					<li><a href="http://docs.fuelphp.com/general/coding_standards.html">Coding Standards</a></li>
+					<li><a href="http://github.com/fuel/fuel">GitHub Respository</a></li>
+					<li><a href="http://fuelphp.com/contribute/issue-tracker">Issue Tracker</a></li>
+				</ul>
 			</div>
 		</div>
+		<hr/>
 		<footer>
 			<p class="pull-right">Page rendered in {exec_time}s using {mem_usage}mb of memory.</p>
 			<p>
